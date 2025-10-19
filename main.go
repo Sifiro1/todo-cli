@@ -31,6 +31,15 @@ func main() {
 			return
 		}
 		todo.Done(os.Args[2])
+case "help":
+	fmt.Println(`
+Доступные команды:
+  add <текст>     - добавить задачу
+  list            - показать список
+  done <номер>    - отметить выполненное
+  clear           - очистить все задачи
+  help            - показать это сообщение
+`)
 	default:
 		fmt.Println("Неизвестная команда:", command)
         case "clear":
