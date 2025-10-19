@@ -15,6 +15,13 @@ func Add(task string) {
 	saveToFile()
 }
 
+func Clear() {
+	os.Remove("tasks.txt")
+	tasks = nil
+	completed = make(map[int]bool)
+	fmt.Println("Все задачи удалены.")
+}
+
 func List() {
 	loadFromFile()
 	if len(tasks) == 0 {

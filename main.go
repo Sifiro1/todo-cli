@@ -33,5 +33,7 @@ func main() {
 		todo.Done(os.Args[2])
 	default:
 		fmt.Println("Неизвестная команда:", command)
+        case "clear":
+	todo.Clear()
 	}
 }
